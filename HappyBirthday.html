@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>生日快乐</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      overflow: hidden;
+      background-color:#b6daf27f;
+      position: relative;
+      height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    .firework {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      z-index: 1;
+    }
+
+
+
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: #0f6bec;
+      border-radius: 50%;
+      animation: twinkling 1s infinite;
+    }
+    .star1 {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: #f7f739;
+      background-color: #15f057;
+      background-color: #a518ec7f;
+      border-radius: 50%;
+      animation: twinkling 1s infinite;
+    }
+    
+
+    
+      @keyframes twinkling {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+        
+        .title {
+            color: rgb(66, 148, 225);
+            top: 20%;
+            font-size: 120px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(157, 149, 149, 0.938);
+            font-family:'Courier New', Courier, monospace;
+        }
+        
+        .fireworks-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            pointer-events: none;
+        }
+        
+        .firework1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 10%;
+            width: 20px;
+            height: 20px;
+            background-color: #f4d8d8;
+            border-radius: 50%;
+            animation: fire_works 3s infinite;
+            pointer-events: none;
+        }
+
+        
+        @keyframes fire_works {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(10);
+            }
+        }
+
+        
+        .cake {
+            position: relative;
+            left: 40%;
+            height: 222px;
+            width: 200px;
+            pointer-events: none;
+        }
+        
+        
+        .cake-layer1 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #FCC;
+            pointer-events: none;
+        }
+        .cake-layer2 {
+            position:absolute ;
+            left: 10%;
+            bottom: 80px;
+            width: 80%;
+            height: 30px;
+            background-color: rgb(137, 207, 240);
+            pointer-events: none;
+        }
+        .cake-layer3 {
+            position:absolute ;
+            left: 20%;
+            bottom: 140px;
+            width: 60%;
+            height: 20px;
+            background-color: rgb(248, 248, 144);
+            pointer-events: none;
+        }
+        .cake-layer4 {
+            position:absolute ;
+            left: 25%;
+            bottom: 81%;
+            width: 5%;
+            height: 20px;
+            background-color: rgb(197, 141, 249);
+            pointer-events: none;
+        }
+        .cake-layer5 {
+            position:absolute ;
+            left: 45%;
+            bottom: 81%;
+            width: 5%;
+            height: 20px;
+            background-color: rgb(167, 249, 91);
+            pointer-events: none;
+        }
+        .cake-layer6 {
+            position:absolute ;
+            left: 65%;
+            bottom: 81%;
+            width: 5%;
+            height: 20px;
+            background-color: rgb(249, 141, 141);
+            pointer-events: none;
+        }
+        
+        .candle1 {
+            position: absolute;
+            bottom: 94%;
+            left: 25%;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(248, 195, 35);
+            border-radius: 30%;
+            pointer-events: none;
+            animation: flicker 1s infinite;
+        }
+        .candle2 {
+            position: absolute;
+            bottom: 94%;
+            left: 45%;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(248, 195, 35);
+            border-radius: 30%;
+            pointer-events: none;
+            animation: flicker 1s infinite;
+        }
+        .candle3 {
+            position: absolute;
+            bottom: 94%;
+            left: 65%;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(248, 195, 35);
+            border-radius: 30%;
+            pointer-events: none;
+            /* animation: blink 0.7s infinite; */
+            animation: flicker 1s infinite;
+        }
+        @keyframes flicker {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        .birthday-wishes1 {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            color: rgb(65, 235, 244);
+            font-size: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: scroll 20s linear infinite;
+            white-space: nowrap;
+        }
+        .birthday-wishes2 {
+            position: absolute;
+            top: 15%;
+            right: -100%;
+            width: 100%;
+            padding: 20px;
+            color: rgb(249, 252, 43);
+            font-size: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: scroll 20s linear infinite;
+            white-space: nowrap;
+        }
+        .birthday-wishes3 {
+            position: absolute;
+            bottom: 10%;
+            right: -50%;
+            width: 100%;
+            padding: 20px;
+            color: rgb(57, 252, 43);
+            font-size: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: scroll 20s linear infinite;
+            white-space: nowrap;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+  </style>
+</head>
+<body>
+  <div id="fireworks" class="firework"></div>
+  <div class="container">
+    <div class="title"><b>Happy Birthday</b></div>
+    <div class="fireworks-container"></div>
+    <div class="cake">
+        <div class="cake-layer"></div>
+        <div class="cake-layer1" style="height: 80px;"></div>
+        <div class="cake-layer2" style="height: 60px;"></div>
+        <div class="cake-layer3" style="height: 40px;"></div>
+        <div class="cake-layer4" style="height: 30px;"></div>
+        <div class="cake-layer5" style="height: 30px;"></div>
+        <div class="cake-layer6" style="height: 30px;"></div>
+        <div class="candle1"></div>
+        <div class="candle2"></div>
+        <div class="candle3"></div>
+    </div>
+    <div class="birthday-wishes1">
+        Best wishes for a happy birthday! May all your dreams come true.
+        <hr>
+        祝你生日快乐！愿你所有的梦想都能成真。
+    </div>
+    <div class="birthday-wishes2">
+        18岁生日快乐！ 18岁生日快乐！ 18岁生日快乐！18岁生日快乐！18岁生日快乐！
+    </div>
+    <div class="birthday-wishes3">
+        越来越高 越来越帅 一如既往的聪明
+        <br>
+        无所畏惧的勇敢 长大也意味着担当 做一个有责任感的男子汉！弟弟 生日快乐！
+    </div>
+</div>
+
+
+  <script>
+    function createStar() {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDuration = Math.random() * 3 + 1 + 's';
+
+      setTimeout(() => {
+        star.remove();
+      }, 3000);
+      
+      document.body.appendChild(star);
+    }
+
+    function createFirework() {
+      const fireworks = document.getElementById('fireworks');
+
+      for (let i = 0; i < 30; i++) {
+        const firework = document.createElement('div');
+        firework.classList.add('star');
+        firework.style.left = Math.random() * 100 + '%';
+        firework.style.top = Math.random() * 100 + '%';
+        firework.style.animationDuration = Math.random() * 3 + 1 + 's';
+
+        setTimeout(() => {
+          firework.remove();
+        }, 3000);
+
+        fireworks.appendChild(firework);
+      }
+    }
+
+    setInterval(createStar, 500);
+    setInterval(createFirework, 3000);
+
+    function createStar1() {
+      const star1 = document.createElement('div');
+      star1.classList.add('star1');
+      star1.style.left = Math.random() * 100 + '%';
+      star1.style.animationDuration = Math.random() * 3 + 1 + 's';
+
+      setTimeout(() => {
+        star1.remove();
+      }, 3000);
+      
+      document.body.appendChild(star1);
+    }
+
+    function createFirework1() {
+      const fireworks = document.getElementById('fireworks');
+
+      for (let i = 0; i < 30; i++) {
+        const firework = document.createElement('div');
+        firework.classList.add('star1');
+        firework.style.left = Math.random() * 100 + '%';
+        firework.style.top = Math.random() * 100 + '%';
+        firework.style.animationDuration = Math.random() * 3 + 1 + 's';
+
+        setTimeout(() => {
+          firework.remove();
+        }, 3000);
+
+        fireworks.appendChild(firework);
+      }
+    }
+
+    setInterval(createStar1, 500);
+    setInterval(createFirework1, 3000);
+
+    function createFirework1() {
+            const firework1 = document.createElement('div');
+            firework1.className = 'firework1';
+            firework1.style.left = Math.random() * 100 + 'vw';
+            firework1.style.animationDuration = Math.random() * 3 + 1 + 's';
+            document.querySelector('.fireworks-container').appendChild(firework1);
+
+            setTimeout(() => {
+                firework1.remove();
+            }, 3000);
+        }
+        setInterval(createFirework1, 300);
+        function blinkCandles() {
+            const candles = document.querySelectorAll('.candle');
+            candles.forEach((candle, index) => {
+                setTimeout(() => {
+                    candle.style.animationDelay = index + 's';
+                    candle.style.animationDuration = (candles.length - index) + 's';
+                    candle.classList.add('blink');
+                }, index * 1000);
+            });
+        }
+
+        blinkCandles();
+
+  </script>
+</body>
+</html>
